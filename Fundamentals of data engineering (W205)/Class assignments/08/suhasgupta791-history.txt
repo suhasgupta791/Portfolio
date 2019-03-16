@@ -1,0 +1,26 @@
+
+  810  cd ~/w205/assignment-08-suhasgupta791/
+  811  cp ~/w205/course-content/08-Querying-Data/docker-compose.yml .
+
+  813  vi docker-compose.yml
+  814  docker-compose up -d 
+  815  docker-compose ps 
+  816  cd ~/w205/ 
+  817  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+  819  cat assessment-attempts-20180128-121051-nested.json| jq '.[]' -c
+  820  cd ~/w205/assignment-08-suhasgupta791/
+  821  clear
+
+  824  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+
+  826  docker-compose exec kafka kafka-topics --describe --topic assessments --zookeeper zookeeper:32181
+  827  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json  | jq '.' -c "
+  828  jq length ../assessment-attempts-20180128-121051-nested.json
+  829  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments && echo 'Produced 3280 messages.'"
+  830  docker-compose exec spark pyspark
+  831  docker-compose exec cloudera hadoop fs -ls /tmp/
+  832  docker-compose exec cloudera hadoop fs -ls /tmp/extracted_messages
+  833  clear
+  834  docker-compose down 
+  835  docker-compose ps
+  836  docker ps -a

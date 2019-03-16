@@ -1,0 +1,15 @@
+ 5193  cd ~/w205/assignment-06-suhasgupta791/
+ 5194  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+ 5195  cd ~/w205/
+ 5196  cd assignment-06-suhasgupta791
+ 5197  cp ../course-content/06-Transforming-Data/docker-compose.yml .
+ 5198  docker-compose up -d 
+ 5199  docker-compose ps 
+ 5200  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 5201  docker-compose exec kafka kafka-topics --describe --topic assessments --zookeeper zookeeper:32181
+ 5204  docker-compose exec mids bash -c "cat  assignment-06-suhasgupta791/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments && echo 'Produced a lot of messages.'"
+ 5210  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e"
+ 5211  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e" | wc -l
+ 5212  docker-compose down 
+ 5213  docker-compose ps 
+ 5214  docker ps -a 

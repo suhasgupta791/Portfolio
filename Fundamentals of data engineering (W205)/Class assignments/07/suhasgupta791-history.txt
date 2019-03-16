@@ -1,0 +1,21 @@
+  471  cd ~/w205
+  472  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+  473  cd spark-with-kafka
+  474  cp ~/w205/course-content/07-Sourcing-Data/docker-compose.yml .
+  475  vi docker-compose.yml
+  476  docker-compose up -d
+  477  docker-compose logs -f kafka
+
+  479  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  480  docker-compose exec kafka kafka-topics --describe --topic assessments --zookeeper zookeeper:32181\n
+  
+  483  docker-compose exec mids bash -c "cat  assessment-attempts-20180128-121051-nested.json" 
+  484  docker-compose exec mids bash -c "cat  assessment-attempts-20180128-121051-nested.json  | jq '.'"
+  485  docker-compose exec mids bash -c "cat  assessment-attempts-20180128-121051-nested.json  | jq '.' -c "
+  491  jq length ../assessment-attempts-20180128-121051-nested.json
+
+  507  docker-compose exec mids bash -c "cat assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments && echo 'Produced 3280 messages.'"
+  508  docker-compose exec spark pyspark
+  509  docker-compose down 
+  510  docker-compose ps 
+  511  docker ps -a 

@@ -1,0 +1,83 @@
+ 1335  vi README.md 
+ 1336  pwd
+ 1337  vi htmartin-annotations.md 
+ 1338  vi htmartin-history.txt 
+ 1339  cd ../course-content/
+ 1340  cd ../
+ 1341  pwd
+ 1342  cd assignment-05-suhasgupta791/
+ 1343  ls
+ 1344  cp ../course-content/05-Storing-Data-II/example-4-docker-compose.yml docker_compose.yml
+ 1345  cleasr
+ 1346  clear
+ 1347  ls -ltr 
+ 1348  vi htmartin-history.txt 
+ 1349  mv htmartin-annotations.md sgupta-annotations.md
+ 1350  ls 
+ 1351  history
+ 1352  clear
+ 1353  ls
+ 1354  history > sgupta-history.txt
+ 1355  vi sgupta-history.txt 
+ 1356  pwd
+ 1357  ls
+ 1358  rm htmartin-history.txt 
+ 1359  s
+ 1360  vi sgupta-annotations.md 
+ 1361  vi sgupta-history.txt 
+ 1362  vi sgupta-annotations.md 
+ 1363  pw
+ 1364  vi sgupta-history.txt 
+ 1365  pwd
+ 1366  cd ../
+ 1367  ls
+ 1368  pwd
+ 1369  cd redis-cluster/
+ 1370  ls
+ 1371  vi docker-compose.yml 
+ 1372  clear
+ 1373  cd
+ 1374  mkdir ~/w205/redis-cluster
+ 1375  mkdir -p ~/w205/redis-cluster
+ 1376  cd ~/w205/redis-cluster/
+ 1377  cp ../course-content/05-Storing-Data-II/example-4-docker-compose.yml docker-compose.yml 
+ 1378  docker-compose up -d 
+ 1379  vi docker-compose.yml 
+ 1380  docker-compose ps 
+ 1381  docker-compose logs redis 
+ 1382  docker-compose exec mids bash
+ 1383  docker-compose down 
+ 1384  docker-compose ps
+ 1385  docker ps -a 
+ 1386  docker-compose up -d 
+ 1387  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+ 1388  vi docker-compose.yml 
+ 1389  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+ 1390  vi docker-compose.yml 
+ 1391  docker-compose down
+ 1392  docker-compose ps
+ 1393  docker ps -a 
+ 1394  docker-compose up -d 
+ 1395  docker-compose ps
+ 1396  docker-compose logs mids
+ 1397  vi docker-compose.yml 
+ 1398  docker-compose down 
+ 1399  docker-compose ps
+ 1400  docker ps -a 
+ 1401  cd ~/w205
+ 1402  pwd
+ 1403  curl -L -o trips.csv https://goo.gl/QvHLKe
+ 1404  ls -ltr 
+ 1405  pwd
+ 1406  cd redis-cluster/
+ 1407  docker-compose up -d 
+ 1408  docker-compose logs mids 
+ 1409  cp ../trips.csv .
+ 1410  pwd
+ 1411  l
+ 1412  rm trips.csv 
+ 1413  docker-compose down 
+ 1414  docker-compose ps
+ 1415  docker ps -a 
+ 1416  cd ../assignment-05-suhasgupta791/
+ 1417  history > sgupta-history.txt 
