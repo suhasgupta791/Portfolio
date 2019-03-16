@@ -1,0 +1,101 @@
+---
+title: "<center>Unit 1 Homework</center>"
+output:
+  html_document: default
+  pdf_document: 
+    latex_engine: xelatex
+    number_sections: yes
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<center><h2>W203 Statistics for Data Science</h2>
+<h4>Student Name: Suhas Gupta</br>
+Section Number: Section 7</h4></center>
+<h3>Exercises</h3>
+
+**1.0 : ** Load the dataset found in the file, cars.csv.
+
+
+Read the CSV data in a data frame and set header line and comma seperator</br>
+Set the working directory to current directory inside the cell. The cars.csv file should be present in this directory
+
+Read the data if the file is available. If not, then flag a warning that the file is not present in the current directory 
+```{r}
+setwd("/Users/suhasgupta/MIDS_W203/")
+carsData = tryCatch({
+                    read.table("cars.csv", header = TRUE, sep =",")},
+                    warning = function(w){
+                        sprintf("The data file cars.csv doesn't exist in the current directory")},
+                    error = function(e){}
+                   )
+# display first few lines of carsData to ensure it is loaded correctly
+head(carsData)  
+```
+
+</br>**2.0 : ** What are the variables in the file?</br>
+
+
+Display the variables in the data frame carsData
+```{r}
+objects(carsData)
+```
+
+</br>**3.0 : ** Find the mean, median, minimum, maximum, 1st quartile and 3rd quartile for the mpg variable.
+
+
+Compute the summary of the mpg variable in carsData data frame
+```{r}
+carsMPG <- carsData$mpg # copy the variable to new name for better readability  and code control
+summary(carsMPG)
+```
+</br>**4.0 : ** Create a histogram of the mpg variable.
+
+
+Plot the histogram of the mpg variable</br>
+Offset the bin boundaries by 0.05 to include avoid missing data points on  on class edges
+```{r}
+hist(carsMPG,breaks=c(9.95, seq(12.45,35.05,2.5)), main="Histogram for the cars dataset", xlab = "MPG", ylab="Number of cars",border="black", 
+     col="lightgreen",xlim=c(9.95,35.05), axes=F, plot=TRUE)
+axis(1, at=seq(9.95,35.05,2.5), labels=TRUE, cex.axis=0.75) 
+axis(2, cex.axis = 0.75)
+```
+
+</br>**5.0 : ** What is the variance of mpg variable?
+
+
+Compute the sample variance using the var function
+```{r}
+variance = var(carsMPG)
+sprintf('Sample variance of MPG = %0.3f', variance)
+```
+
+</br>**6.0 : ** What is the standard deviation of mpg variable?
+
+
+Compute the standard deviation using the sd function
+```{r}
+stdDev = sd(carsMPG)
+sprintf('Standard Deviation of MPG = %0.3f mpg', stdDev)
+```
+
+</br>**7.0 :** What is the relationship of the standard deviation to the variance? Why does the standard deviation and variance of the mpg variable differ?
+
+<I>Ans: </I> The sample standard deviation is the positive square root of the variance.
+The standard deviations is defined differently than the variance to provide a metric for easier intuitive understanding of the sample dataset. Taking the square root of the variance lets standard deviation have the same units as the data variable. This helps in rough estimation of the typical size of deviation, of datum points within the sample, from the sample mean.
+
+</br>**8.0 : ** How many data points are there for the cyl variable?
+
+Compute the number of data points in cyl variable
+```{r}
+carsCYL <- na.omit(carsData$cyl) # wrap with na.omit to ignore counting the missing data points
+sprintf('Number of data points in cyl variable = %d', length(carsCYL))  # display the number of data points in cyl
+```
+</br>**9.0 : ** What is the mean of the cyl variable?
+
+Compute the mean of cyl variable
+```{r}
+meanCYL = mean(carsCYL, trim = 0, na.rm = TRUE)
+sprintf("Mean of cyl variable = %0.4f", meanCYL)
+```

@@ -1,0 +1,268 @@
+---
+title: "W203: Home Work 4 Suhas Gupta"
+author: Suhas Gupta
+Date: 10/1/2018
+output:
+  pdf_document: 
+    latex_engine: xelatex
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Question 1:**
+
+**(a)**  
+
+The outcomes of a coin toss follows a binomial distribution with p.m.f given by:
+
+$$
+b(x;n,p) = \left\{
+        \begin{array}{ll}
+            {{n}\choose{k}} p^k(1-p)^k &, \quad x\in I \\
+            0 &, \quad otherwise
+        \end{array}
+    \right.
+$$
+<center> where n: number of trials </center>
+<center> p: probability of getting heads </center>
+
+$$ \to p = 0.5 $$
+$$ 1-p = 0.5 $$
+Let h(X) denote the function that represents payout.
+
+Expectation of earnings, 
+$$  E(X) = \sum^3_0 {p(x)h(x)} $$
+$$ = p(0)(0) + p(1)(2) + p(2)(4) + p(3)h(3) $$
+$$ = (1/8)(0) + (3/8)(2) + (3/8)(4) + (1/8)h(3) $$
+$$ But,\ E(X) = 6 (given) \\ $$  
+Solving for h(3) gives, 
+
+$$ \to h(3)  = 30 \\ $$
+Expected earnings from getting 3 heads = **$30**
+
+**(b)**
+
+$$ F(X) = P(X \leq x) = \sum_{y:y\leq x}{P(y)}$$
+
+$$ F(0) = P(y \leq 0) = \sum_{y:y\leq 0}{P(y)}) = \frac{1}{8} $$
+$$ F(1) = P(y \leq 1) = \sum_{y:y\leq 1}{P(y)}) = \frac{1}{2} $$
+$$ F(2) = P(y \leq 2) = \sum_{y:y\leq 2}{P(y)}) = \frac{7}{8} $$
+$$ F(3) = P(y \leq 3) = \sum_{y:y\leq 3}{P(y)}) = 1 $$
+
+Expression for cummulative probability F(Y): 
+
+$$
+F(Y) = \left\{
+        \begin{array}{ll}
+            0           &, \quad y < 0\\
+            1/8 &, \quad 0 \leq y < 1\\
+            1/2 &, \quad 1 \leq y < 2\\
+            7/8 &, \quad 2 \leq y < 3\\
+            1           &, \quad  3 < y\\
+        \end{array}
+    \right.
+$$
+
+**Question 2**  
+
+p.d.f: 
+$$
+f(l) = \left\{
+        \begin{array}{ll}
+            0           &, \quad l \leq 0\\
+            1/2         &, \quad 0 \leq l < 2\\
+            0           &, \quad  2 < l\\
+        \end{array}
+    \right.
+$$
+**(a)**  
+
+$$ F(l) = P(L \leq l) = \int_{-\infty}^{l} f(l) dl \\
+ = \int_{0}^{l} {\frac{l}{2} dl}  = \frac{l^2}{4} 
+$$
+Thus c.d.f of L: 
+$$ 
+F(L) = \left\{
+        \begin{array}{ll}
+            0           &, \quad l \leq 0\\
+            l^2/4 &, \quad 0 \leq l < 2\\
+            1           &, \quad  2 < l\\
+        \end{array}
+    \right.
+$$
+**(b)**
+
+$$ E(L) = \int_{-\infty}^{\infty} l \cdot f(l) dl $$
+$$ = \int_{0}^{2} l \cdot \frac{l^2}{4} dl  $$
+$$ = \frac{1}{12} l^3 \Big|_{0}^{2} $$
+
+$$ = 0.67 $$ 
+
+**Question 3**
+
+**(a)**
+
+c.r.v f(t),  
+$$
+f(t) = \left\{
+        \begin{array}{ll}
+            1           &, \quad 0 \leq x < 1\\
+            0           &, \quad  otherwise\\
+        \end{array}
+    \right.
+$$
+c.d.f F(T), 
+$$ F(T) = \int_{-\infty}^{t} f(t)dt = \int_{0}^{t} 1\ dt = t $$
+Thus, 
+$$
+F(T) = \left\{
+        \begin{array}{ll}
+            0           &, \quad t < 0 \\
+            t           &, \quad  0 \le t < 1\\
+            1           &, \quad 1 \le t \\
+        \end{array}
+    \right.
+$$
+$$ g(t) = 100(1-t)^\frac{1}{2} $$
+$$
+E[g(T)] = \int_{-\infty}^{\infty} g(t) \cdot f(t) dt \\ 
+= \int_{0}^{1} 100(1-t)\frac{1}{2} \cdot 1 dt
+= 100 \frac{(1-t)^\frac{3}{2}}{\frac{3}{2}} \cdot (-1) \Big|_{0}^{1}\\
+= \frac {200}{3} = 66.67
+$$
+
+**(b)**
+
+***(i)***
+$$ x = 100(1-t)^\frac{1}{2}\\
+\to (1-t)^\frac{1}{2} = \frac {x}{100} \\
+\to 1-t = \frac{x^2}{10^4}\\
+\to t = 1-\frac{x^2}{10^4} ; 0 \le x \le 100
+$$
+***(ii)***
+For $$ X \leq x, T \ge t $$
+where 
+
+$$ t = 1 - \frac{x^2}{10^4} $$
+
+$$ 
+P(T \ge t) = 1 - P(T \le t) = 1 - F(t) \\ 
+ = 1-t\ ; \quad for\  0 \le 1
+$$
+***(iii)***
+
+$$ F(X) = P(X \le x) = 1 - t = 1 - \Big(1-\frac{x^2}{10^4}\Big) = \frac{x^2}{10^4}$$
+$$
+F(X) = \left\{
+        \begin{array}{ll}
+            0           &, \quad x \leq 0 \\
+           {x^2}/{10^4} &, \quad  0 \leq x < 100\\
+            1           &, \quad 100 \leq x \\
+        \end{array}
+    \right.
+$$
+$$
+F'(X) = \left\{
+        \begin{array}{ll}
+           {2x}/{10^4} &, \quad 0 \le x \le 100 \\
+            0           &, otherwise \\
+        \end{array}
+    \right.
+$$
+$$ 
+E(X) = \int_{0}^{100} {x \cdot \frac{2x}{10^4}dx} \\
+ = \frac{2}{10^4} \cdot \frac{x^3}{3}\big|_{0}^{100} \\
+ = \frac{200}{3} \\
+ = 66.67
+$$
+ 
+ 
+**Question 4**
+ 
+$$ X ; \quad t \in \mathbb{R} $$
+$$ Y = (X -t)^2 $$
+
+**(a)**
+
+$$
+E(Y) = \int_{-\infty}^{\infty}{(x-t)^2 f(x)dx} $$
+$$ = E[(x-t)^2] $$
+$$ = E[X^2+t^2-2Xt] $$
+$$ = E(X^2)+E(t^2)-2E(Xt) $$
+$$ = E(X^2)+t^2-2tE(X) $$
+$$ to E(Y) = E(X^2)+t^2 - 2\mu_{X}t $$
+
+**(b)**
+
+$$
+\frac{\partial E(Y)}{\partial t} $$
+$$ = \frac{\partial E(X^2)}{\partial t} + 2t -2\mu_X = 2t-2\mu_X $$
+$$ For\ minimum\ E(Y),\ 2t - 2\mu_X = 0 $$
+$$ \to t = \mu_X  $$
+
+**Question 5**
+
+Given,
+c.r.v X with p.d.f f(x)
+
+& c.r.v Y = h(X) 
+
+Let F(X) be the c.d.f of X,
+i.e. f(x) = F'(X)
+
+Also, 
+$$ X = h^{-1}(X) $$
+Let g(Y) be the p.d.f of Y 
+
+Then, 
+
+$$
+F_Y(y) = P(Y \le y) \\
+ = P(h(X) \le y) \\
+ = \int_{h(x) < y}{f_X(x)dx} \\
+$$
+If h(X) is increasing, then 
+$$
+F_Y(y) = \int_{x \le h^{-1}(y)}{f_X(x)dx} \\
+= \int_{-\infty}^{h^{-1}(y)} {f_X(x)dx} \\
+= F_X\big(h^{-1}(y)\big)\\
+$$
+If h(X) is decreasing, thenm
+$$
+F_Y(y) = \int_{x \ge h^{-1}(y)}{f_X(x)dx} \\
+= \int_{h^{-1}(y)}^{\infty} {f_X(x)dx} \\
+= 1 - F_X\big(h^{-1}(y)\big) \\
+$$
+p.d.f of Y, 
+$$ 
+g(y) = \frac{d}{dy} F_Y(y)
+$$
+
+$$
+\to g(y) =
+    \left\{
+        \begin{array}{ll}
+            \frac{d}{dy} \Big(F_X(h^{-1}(y))\Big) &, \quad if\ h\ is\ increasing  \\
+            \frac{d}{dy} \Big(1-F_X(h^{-1}(y))\Big) &, \quad\ if\ h\ is\ decreasing  \\
+        \end{array}
+    \right.
+$$
+Applying the chain rule of differentiation, we get 
+$$
+g(y) = 
+\left\{
+        \begin{array}{ll}
+            f(h^{-1}(y))\Big(\frac{d}{dy}{h^{-1}(y)\Big)} &, \quad if\ h\ is\ increasing  \\
+            f(h^{-1}(y))\Big(-\frac{d}{dy}{h^{-1}(y)\Big)} &, \quad if\ h\ is\ increasing  \\
+        \end{array}
+    \right.
+$$
+The above can be written in compact form as,
+
+$$
+g(y) = f(h^{-1}(y)) \cdot \Big|\frac{d}{dy}{h^{-1}(y)\Big|}
+$$

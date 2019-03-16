@@ -1,0 +1,297 @@
+---
+title: "W203 Home Work 5"
+Data: 10/7/2018
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+Author: Suhas Gupta
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Suhas Gupta**
+
+**Question 1**
+
+$$ E(W) = \mu_W = 10 $$ 
+$$ \sigma_W = 4 $$
+$$ V= 0.5\cdot W + U $$
+
+Since, U is a standard normal distribution,  
+$$ E(U) = \mu_U = 0 $$
+and  
+$$ \sigma_U = 1 $$
+
+$$ E(V) = E(0.5 \cdot W + U) $$ 
+$$ = 0.5 \cdot E(W) + E(U) $$
+$$ = 0.5\mu_W + 0  = 0.5 \cdot 10 = 5 $$
+Variance of V, 
+$$ \sigma_V^2 = Var(V) = Var(0.5 \cdot W + U) = Var(0.5W) + Var(U) + 2\cdot cov(0.5W,U) $$
+$$ = 0.5^2 \cdot Var(W) + Var(U) - 0 $$
+$$ = 0.25 \cdot \sigma_W^2 + 1  = 0.25 \cdot 16 + 1 = 5 $$ 
+
+The covariance of V and W is defined as,
+
+$$ cov(V,W) = E(VW) - E(V)E(W) = E(VW) - \mu_W \mu_V $$
+Now,
+$$ E(VW) = E[W(0.5W + U)] = E(0.5W^2 + UW) $$ 
+$$ = 0.5E(W^2)+E(UW) = 0.5(\sigma_W^2+\mu_W^2) $$
+$$ = 0.5(16 + 100) = 58 $$
+Substituting these values back in the covariance equation, 
+$$ cov(V,W) = 58 - 5 \cdot 10  = 8 $$
+Now we can construct the variance-covariance matrix for V and W: 
+$$
+ \sum = 
+ \begin{bmatrix} 
+    E[(W-\mu_W)(W-\mu_W)]&E[(W-\mu_W)(V-\mu_V)]\\
+    E[(V-\mu_V)(W-\mu_W)]&E[(V-\mu_V)(V-\mu_V)]\\
+ \end{bmatrix}
+$$
+$$
+\sum = 
+\begin{bmatrix} 
+    \sigma_W^2 & cov(W,V)\\
+    cov(V,W)&\sigma_V^2\\
+\end{bmatrix}
+$$
+$$
+\sum = 
+\begin{bmatrix} 
+    16 & 8\\
+    8  & 5\\
+\end{bmatrix}
+$$
+**Question 2:**
+
+**(a)**
+
+X is a c.r.v with a uniform probability distribution and the marginal p.d.f of X can be written as: 
+
+$$
+f_X(x) = \left\{
+        \begin{array}{ll}
+            1           &, \quad 0 \leq x \leq 1 \\
+            0           &, \quad otherwise
+        \end{array}
+    \right.
+$$
+Y is a c.r.v whose outcome is conditional on the outcome of X. The conditional p.d.f of Y is also a uniform distribution and can be written as: 
+
+$$
+f_{Y|X}(y|x) = \left\{
+        \begin{array}{ll}
+            \frac{1}{x} &, \quad 0 \leq y \leq x \\
+            0           &, \quad otherwise
+        \end{array}
+    \right.
+$$
+
+Using the definition of conditional probability for joint distributions, we have 
+
+$$ f_{Y|X}(y|x) = \frac{f(x,y)}{f_X(x)} \quad; -\infty < y < \infty $$
+Solving for f(x,y),
+$$
+f(x,y) = \left\{
+        \begin{array}{ll}
+            f_{Y|X}(y|x) \cdot f_X(x)  = \frac{1}{x}\cdot 1; \quad 0 \le y \le x,\quad 0 \leq x \leq 1 \\
+            0           &, \quad otherwise
+        \end{array}
+    \right.
+$$
+$$
+f(x,y) = \left\{
+        \begin{array}{ll}
+            \frac{1}{x} &; \quad 0 \leq x \leq 1 \\
+            0           &, \quad otherwise
+        \end{array}
+    \right.
+$$
+The conditional expectation of Y given X=x can now be computed as: 
+$$ E(Y|X=x) = \int_{-\infty}^{\infty}{y \cdot f(y|x)\ dy} $$
+
+$$ = \int_{0}^{x}{y\cdot\frac{1}{x}dy = \frac{1}{2x}y^2 \Big|_{0}^{x} = \frac{x}{2}}$$
+**(b)**
+To find the unconditional expectation of Y, we can use the law of iterated expectations which states
+$$ E(Y) = E[E(Y|X)] = \int_{-\infty}^{\infty}{E(Y|X)f(x)dx} $$
+$$ = \int_{0}^{1}{\frac{x}{2}\cdot 1 dx} = \frac{x^2}{4}\Big|_{0}^{1} = \frac{1}{4} = 0.25$$
+
+**(c)**
+Using the law of iterated expectations, we can write
+
+$$ E(XY) = E_X[E(XY|X)] = E_X[XE(Y|X)] $$
+$$ = E[X \cdot \frac{X}{2}]  = E(\frac{X^2}{2})= \frac{1}{2}E(X^2)$$
+$$ = \frac{1}{2}\int_{0}^{1}{x^2 \cdot f(x)dx} = \frac{1}{2}\int_{0}^{1}{x^2 \cdot 1dx} = \frac{1}{6}x^3\Big|_{0}^{1} = \frac{1}{6} = 0.167$$
+
+**(d)**
+The covariance of X and Y can be computed from the following formula:
+$$ cov(X,Y) = E(XY) - E(X)E(Y) = E(XY) - \mu_X \mu_Y$$
+Since X has a uniform p.d.f in [0,1], its expectation is given by 
+$$ E(X) = \frac{1}{2}(1+0) = \frac{1}{2} $$
+
+Thus, 
+$$ cov(X,Y) = \frac{1}{6} - \frac{1}{2} \cdot \frac{1}{4} = 0.04167 $$
+
+**Question 3**
+
+**(a)**
+
+Let X represent the c.r.v for the morning wait time and Y represent the c.r.v for evening wait time.
+
+Since both X & Y have a uniform probability distribution, the probability density function for each can be written as:
+
+$$
+f(x) = \left\{
+        \begin{array}{ll}
+            \frac{1}{5}    &, \quad 0 \leq x \leq 5 \\
+            0              &, \quad otherwise \\
+        \end{array}
+    \right.
+$$
+
+$$
+f(y) = \left\{
+        \begin{array}{ll}
+            \frac{1}{10} &, \quad 0 \leq x \leq 10 \\
+            0              &,\quad otherwise \\
+        \end{array}
+    \right.
+$$
+We can define a new random variable Z that represents the total wait time for 5 days including morning and evenings. Then,
+$$ Z = 5X+5Y $$
+Expectation, 
+$$ E(Z) = E(5X+5Y) = 5 \cdot E(X+Y) = 5 \cdot[(E(X)+E(Y)] $$
+The expectation of a uniform probability distribution in [A,B] is given by 
+
+$$ \frac{1}{2}(B+A) $$
+Thus, expectaction of total wait time on all 5 days  including mornings and evenings is, 
+
+$$ E(Z) = 5 \cdot \frac{1}{2} \cdot (5 + 10)  = 37.5 $$
+
+**(b)**
+
+Variance of total wait time, 
+$$ Var(Z) = Var(5X + 5Y) $$
+
+Using the properties of variance, 
+
+$$ Var(Z) = 5^2 \cdot Var(X+Y) $$
+$$ = 25 \cdot [Var(X) + Var(Y) + 2\cdot cov(X,Y)] $$
+Since X & Y are independent, 
+$$ cov(X,Y) = 0 $$
+
+Also, variance of a random probability distribution in [A,B] is given by 
+$$ Var  = \frac{1}{12}(B-A)^2 $$
+Thus, variance of total wait time is 
+$$ Var(Z) = 25 \cdot \frac{1}{12} \cdot (5^2 + 10^2) = 260.4167 $$ 
+
+**(c)**
+
+Let us define a c.r.v K = 5X - 5Y (difference between total morning and evening wait times). 
+
+Mean value of difference in wait times is the absolute value of expectation for K:
+
+$$ MD = E(|K|) = E(|5X - 5Y|) $$
+$$ = 5|E(X-Y)| = 5 |E(X)-E(Y)| = 5|\frac{5}{2} - \frac{10}{2}| = 12.5 $$
+
+**(d)**
+
+$$ Var(K) = Var(|X-Y|) = Var(X) + Var(Y) - 2\cdot cov(X,Y)$$
+
+$$ = 25 \cdot \frac{1}{12} \cdot (5^2 + 10^2) = 260.4167 $$
+
+**Question 4**
+
+Given random variables X and Y, we have 
+$$ Y = aX + b $$
+where 
+$$ a \ne 0 $$
+Correlation of two random variables is given by 
+
+$$  \rho_{X,Y} = \frac{cov(X,Y)}{\sigma_X \sigma_Y} $$
+Now, 
+$$ cov(X,Y) = E(XY) - E(X)E(Y)$$
+$$ = E[X(aX+b)] - E(X) \cdot E(aX+b) $$
+$$ = E(aX^2+bX) - \mu_X \cdot(aE(X)+b) $$
+$$ = aE(X^2) + bE(X)  - a\mu_XE(X)-b\mu_X$$
+$$ = a(\sigma_X^2+\mu_X^2) + b\mu_X - a\mu_X^2 - b\mu_X  = a\sigma_X^2$$
+Also using the properties of variance, we can write 
+$$ Var(Y) = \sigma_Y^2 = Var(aX+b) = a^2Var(X)= a^2\sigma_X$$
+
+The standard deviation of Y, 
+
+$$ \sigma_Y = \sqrt{a^2\sigma_X^2} $$
+$$
+\sigma_Y = \left\{
+        \begin{array}{ll}
+            a\sigma_X   &, a < 0 \\
+            -a\sigma_X  &, a > 0         
+        \end{array}
+    \right.
+$$
+Then, correlation 
+$$  \rho_{X,Y} = \frac{a\sigma_X^2}{\sigma_X \cdot \pm a\sigma_X} $$
+$$ \rho_{X,Y} =
+\left\{
+        \begin{array}{ll}
+            -1   &, a < 0 \\
+            +1   &, a > 0         
+        \end{array}
+\right.
+$$
+**Question 5**
+
+Given a poisson random variable M, with p.m.f given by 
+
+$$ P_M(m) = 
+\left\{
+    \begin{array}{ll}
+        \frac{\alpha^m}{m!}e^{-\alpha} \quad, m = 0,1,2,... \\
+         0                             \quad, otherwise       
+    \end{array}
+\right.
+$$
+
+N is d.r.v with uniform probability distribution that can take m+1 discrete values, conditional on M=m.
+$$ p_{N|M}(n|M=m)  = 
+\left\{
+        \begin{array}{ll}
+            \frac{1}{m+1}   &, n = 0,1,2,3,....m \\
+            0  &, otherwise
+        \end{array}
+    \right.
+$$
+**(a)**
+
+We have from the definition of conditional probability for joint distributions, 
+$$ p_{N|M}(n|m)= \frac{p(m,n)}{p_M(m)}$$
+The joint probability distribution for M and N can then be written as:
+
+$$ \to p(m,n) = p_{N|M}(n|m) \cdot p_M(m)$$
+$$ p(m,n) = 
+\left\{
+        \begin{array}{ll}
+            \frac{1}{m+1} \cdot \frac{\alpha^m}{m!}e^{-\alpha} = \frac{\alpha^m}{m+1!}e^{-\alpha} &, n \le m \\
+            0  &, otherwise
+        \end{array}
+    \right.
+$$
+
+**(b)**
+The marginal probability distribution of N is defined as
+
+$$ p_N(n) = \sum_{m:P(m,n)>0}^{\infty}{p(m,n)} \quad, n \le m $$
+$$ = \sum_{k=n}^{\infty}\frac{\alpha^k}{k+1!}e^{-\alpha}$$
+$$ = \frac{e^{-\alpha}}{\alpha} \sum_{n}^{\infty}\frac{\alpha^{k+1}}{k+1!}$$
+$$ = \frac{e^{-\alpha}}{\alpha} \Big[ \sum_{0}^{\infty}\frac{\alpha^{k}}{k!} - \sum_{0}^{n}\frac{\alpha^{k}}{k!}\Big] $$
+Using Maclaurin series expansion, the above reduces to 
+
+$$ p_N(n)= \frac{e^{-\alpha}}{\alpha}\Big[e^\alpha - \sum_{0}^{n}\frac{\alpha^{k}}{k!}\Big]$$
+
+$$ p_N(n)= \frac{1}{\alpha}\Big[1 - \sum_{0}^{n}\frac{\alpha^{k}}{k!}e^{-\alpha}\Big] $$ 
+**(c)**
+For large values of N, the bernoulli process can be approximated with a poisson process. The selection of numbers on the real number line for N will be evenly spaced and as N increases, the probability for each number will shrink signifying a rare event. 
+
+
