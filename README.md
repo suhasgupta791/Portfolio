@@ -2,7 +2,7 @@
 Data Science and Machine Learning Portfolio
 
 ### Lead electrical engineer at Apple Inc. designing state of the art hardware for Macbook Pros. 
-### Student of Master's in information and data science (MIDS Class of 2020) at UC Berkeley, CA
+### Student of Master's in Information and Data Science (MIDS Class of 2020) at UC Berkeley, CA
 
 ### Previous education: 
   - Masters in electrical and computer engineering (University of Florida, Gainesville)
