@@ -5,7 +5,7 @@ Data Science and Machine Learning Portfolio
 ### Student of Master's in Information and Data Science (MIDS Class of 2020) at UC Berkeley, CA
 
 ### Previous education: 
-  - Masters in electrical and computer engineering (University of Florida, Gainesville)
+  - Masters in Electrical and Computer Engineering (University of Florida, Gainesville)
 
 ### MIDS@UC Berkeley
 #### Courses
