@@ -7,7 +7,7 @@ Data Science and Machine Learning Portfolio
 ### Previous education: 
   - Masters in Electrical and Computer Engineering (University of Florida, Gainesville)
 
-### MIDS@UC Berkeley
+#### MIDS@UC Berkeley
 #### Courses
   - Research design and applications for data and analysis (W201)
   - Statistics and probability for data science (W203)
