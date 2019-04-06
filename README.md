@@ -25,7 +25,7 @@ that improved electrical module validation efficiency by 3x.
 #### Projects
 
 | Project Title |  Brief Description  |
-|:----------:|:----------:|
+|:----------:|:----------|
 | Regression Modeling of County Crime Data |  Regression modeling and statistical inference on crime data to assist a political campaign|
 | Digit Classification |  Developed an image recognition system for classifying digits in MNIST database |
 | Text Classification |  Trained classifiers to distinguish between news topics based on the texts in 20 newgroup posts |
