@@ -1,6 +1,6 @@
 # Suhas Gupta Portfolio
 
-<italic> LinkinIn: www.linkedin.com/in/guptasuhas </italic>
+[www.linkedin.com/in/guptasuhas]
 
 #### Lead electrical engineer at Apple Inc. designing state of the art hardware for Macbook Pros. 
   - Delivered three new MacBook Pro products in 2018 by leading cross functional hardware development. Efficiently managed design and operations of failure analysis and directed engineering personnel to meet tight project deadlines and successfully deliver products to market.
