@@ -9,9 +9,14 @@ Data Science and Machine Learning Portfolio
 
 #### MIDS@UC Berkeley
 
-| Project Title|Brief Description|
-|----------|:----------|
+#### Projects
+| Project Title |  Brief Description  |
+|:----------:|:----------:|
 | Regression Modeling of County Crime Data |  Regression modeling and statistical inference on crime data to assist a political campaign|
+| Digit Classification |  Developed an image recognition system for classifying digits in MNIST database |
+| Text Classification |  Trained classifiers to distinguish between news topics based on the texts in 20
+newgroup posts |
+| San Francisco Crime Classification |  Kaggle competition for crime category classification given crime location and time |
 
 
 #### Courses
