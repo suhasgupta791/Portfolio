@@ -8,6 +8,14 @@ Data Science and Machine Learning Portfolio
   - Masters in Electrical and Computer Engineering (University of Florida, Gainesville)
 
 #### MIDS@UC Berkeley
+
+| Project Title   |      Brief Description      |  Key Skills/Tools Used |
+|----------|:-------------:|------:|
+| Regression Modeling of County Crime Data |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+
 #### Courses
   - Research design and applications for data and analysis (W201)
   - Statistics and probability for data science (W203)
