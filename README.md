@@ -9,8 +9,8 @@ Data Science and Machine Learning Portfolio
 
 #### MIDS@UC Berkeley
 
-| Project Title   |      Brief Description      |
-|----------|:-------------:|------:|
+| Project Title|Brief Description|
+|----------|:-------------|
 | Regression Modeling of County Crime Data |  Regression modeling and statistical inference on crime data to assist a political campaign|
 
 
