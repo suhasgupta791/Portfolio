@@ -32,6 +32,8 @@ that improved electrical module validation efficiency by 3x.
 | Digit Classification |  Developed an image recognition system for classifying digits in MNIST database |
 | Text Classification |  Trained classifiers to distinguish between news topics based on the texts in 20 newgroup posts |
 | San Francisco Crime Classification |  Kaggle competition for crime category classification given crime location and time |
+| Augmenting BERT for Question Answering with Squad 2.0 |  Adding hidden neural layers to BERT language model for improving performance on SQUAD 2.0 |
+
 
 #### Courses
   - Research design and applications for data and analysis (W201)
