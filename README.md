@@ -13,7 +13,6 @@ that improved electrical module validation efficiency by 3x.
 #### Design Engineer and Semiconductor Technologist @ Intel Corporation (previous)
   - Led design of semiconductor devices and circuits for mixed signal IP development delivering three novel process nodes and enabled 2x manufacturing cost scaling per year.
   - Drove technology definition through complex wafer data analysis consisting of defect signatures from more than a billion on-chip transistors and interconnect segments.
-  - Developed simulation models through OLS regression on high volume silicon data achieving ±5% silicon-to-model correlation across 3𝞂 sample distribution.
   - Developed innovative circuit using gradient descent regression analysis to enable 20% silicon area scaling in 3D multi CPU chip architectures.
 
 
@@ -40,3 +39,4 @@ that improved electrical module validation efficiency by 3x.
   - Statistics and probability for data science (W203)
   - Fundamentals of data engineering (W205)
   - Applied machine learning (W207)
+  - Natural language processing with deep learning (W266)
