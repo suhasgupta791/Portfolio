@@ -1,0 +1,233 @@
+# Write your short answers in this file, replacing the placeholders as appropriate.
+# This assignment consists of 4 parts for a total of 99 points.
+# - Exploration (36 points)
+# - Convolutional Neural Networks (44 points)
+# - Window and Recurrent Models (13 points)
+# - Machine Translation Introduction (6 points)
+
+
+
+###################################################################
+###################################################################
+## Notebook: Exploration (36 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (a): Exploring the Data (15 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1.1 (/3): What is the fraction of positive labels?
+exploration_a_1_1: 0.521676
+
+# Question 1.2 (/1): Is it approximately balanced?
+exploration_a_1_2: True
+
+# Question 1.3 (/2): What is the common class accuracy?
+exploration_a_1_3: 49.917628
+
+# Question 2 (/5): What are the most common five tokens in the data set?
+exploration_a_2: 
+- the
+- a
+- and
+- of
+- to
+
+# Question 3 (/2): What is the 95th percentile sentence length?
+exploration_a_3: 36
+
+# Question 4 (/2): What is the 95th percentile including subphrases?
+exploration_a_4: 24
+
+
+# ------------------------------------------------------------------
+# | Section (b): Naive Bayes (12 points)  | 
+# ------------------------------------------------------------------
+
+# Question 2.1 (/4): What was the percent accuracy reported for your MultinomialNB classifier?  (For 82.1%, type 82.1.)
+exploration_b_2_1: 82.21
+
+# Question 2.2 (/3): What is the most positive word?
+exploration_b_2_2: powerful
+
+# Question 2.3 (/1): What is the most positive word's score?
+exploration_b_2_3: 3.54
+
+# Question 2.4 (/3): What is the most negative word?
+exploration_b_2_4: stupid
+
+# Question 2.5 (/1): What is the most negative word's score?
+exploration_b_2_5: -3.17
+
+
+# ------------------------------------------------------------------
+# | Section (c): Examining Negation (9 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): Why does it get the first one wrong?
+# This question is a candidate for discussion in live session.
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+exploration_c_1: 
+ - A subphrase is negated.
+
+# Question 2.1 (/0): What patterns do you see?  (Ungraded.)
+exploration_c_2_1: Negation changes the sentiment of the root
+
+# Question 2.2 (/1): What is often the relationship of polarity in these interesting sentences between a subphrase and the whole sentence?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+exploration_c_2_2: 
+ - opposite
+
+# Question 2.3 (/2): Is this phenomenon captured well by a linear model?
+exploration_c_2_3: False
+
+# Question 3.1 (/2): What is the error (%) on the whole test set?  (e.g. For 10.4% type 10.4.)
+exploration_c_3_1: 17.79242174629324
+
+# Question 3.2 (/2): What is the error (%) on the interesting part of the test set?  (e.g. for 10.4% type 10.4.)
+exploration_c_3_2: 26.74418604651163
+
+# Question 3.3 (/1): What is the increase in error (as a %)?
+exploration_c_3_3: 50.3122308354867
+
+
+
+###################################################################
+###################################################################
+## Notebook: Convolutional Neural Networks (44 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (a): CNN Short Answer Questions (model architecture) (38 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1.1 (/2): What is the dimension of ck3?
+convolutional_neural_networks_a_1_1: [8]
+
+# Question 1.2 (/2): What is the dimension of ck4?
+convolutional_neural_networks_a_1_2: [7]
+
+# Question 1.3 (/2): What is the dimension of ck5?
+convolutional_neural_networks_a_1_3: [6]
+
+# Question 1.4 (/2): What is the dimension of chatk3?
+convolutional_neural_networks_a_1_4: [128]
+
+# Question 1.5 (/3): What is the dimension of chatk4?
+convolutional_neural_networks_a_1_5: [128]
+
+# Question 1.6 (/3): What is the dimension of chatk5?
+convolutional_neural_networks_a_1_6: [128]
+
+# Question 1.7 (/3): What is the dimension of Chat?
+convolutional_neural_networks_a_1_7: [384]
+
+# Question 2.1 (/3): What is the dimension of ck3?
+convolutional_neural_networks_a_2_1: [10]
+
+# Question 2.2 (/3): What is the dimension of chatk3?
+convolutional_neural_networks_a_2_2: [128]
+
+# Question 3.1 (/3): How many parameters are there in Wfilter=3?
+convolutional_neural_networks_a_3_1: 30
+
+# Question 3.2 (/3): How many parameters are there in Wfilter=4?
+convolutional_neural_networks_a_3_2: 40
+s
+# Question 3.3 (/3): How many parameters are there in Wfilter=5?
+convolutional_neural_networks_a_3_3: 50
+
+# Question 3.4 (/3): How many parameters are there in Wout?
+convolutional_neural_networks_a_3_4: 2688
+
+# Question 4 (/1): Compare kernels to feature engineering.
+# This question is a candidate for discussion in live session.
+convolutional_neural_networks_a_4: Filter kernels in convolution provide an automatic way to tune the feature space by learning the optimal weights. The parameters obtained through loss minimization become the filter coefficients which then automatically select important features in the input data.
+
+# Question 5.1 (/2): Would the two predictions be the same?
+convolutional_neural_networks_a_5_1: False
+
+# Question 5.2 (/0): Why or why not?
+convolutional_neural_networks_a_5_2: The features maps generated by convolution filters will be different for the two inputs.
+
+
+# ------------------------------------------------------------------
+# | Section (c): Tuning your model (6 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): Which method does the paper recommend?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+convolutional_neural_networks_c_1: 
+ - random
+
+# Question 2 (/0): Describe what you found.
+convolutional_neural_networks_c_2: The filter's kernel size and number of filter applied per kernel have strong interaction with each other to impact the performance of the model. There appears to be an optimum kernel size and number combination for each convolution layer. Good range for number of filters is between 12 and 18.
+
+# Question 3 (/0): Did you find they were the same?  Different?  (Are you overfitting the dev set?)
+convolutional_neural_networks_c_3: Different. 
+
+# Question 4 (/5): What was the best accuracy you achieved on the test set?  (As long as you show evidence of exploring, you'll get full points.)
+convolutional_neural_networks_c_4: 0.7660626
+
+
+
+###################################################################
+###################################################################
+## Notebook: Window and Recurrent Models (13 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (a): Neural network topology understanding (13 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/5): What is the main benefit to a window model over a RNN?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+window_and_recurrent_models_a_1: 
+ - Fast to train and use
+
+# Question 2 (/5): What is the computational complexity of the final affine and softmax (over V classes) with hidden layer of dimension h?  Hint. a matrix multiplication of m x n by n x o is O(mno).  Assume each other mathematical operation is O(1).
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+window_and_recurrent_models_a_2: 
+ - O(hV^2)
+
+# Question 3 (/1): In the RNN/LSTM slides (https://docs.google.com/presentation/d/11mkYXoPovKeT9w56Ddl9sS8gBwzoZrEdmszB4o83aYc/edit#slide=id.g5ad7553b58_7_240), when two wires merge in the diagrams, what does that mean?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+window_and_recurrent_models_a_3: 
+ - concatenation
+
+# Question 4 (/2): What are dangers of training RNNs (of any type) with long squences?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+window_and_recurrent_models_a_4: 
+ - Exploding gradient
+ - Vanishing gradient
+
+
+
+###################################################################
+###################################################################
+## Notebook: Machine Translation Introduction (6 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (a): Introduction (6 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/3): What is BLEU?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+machine_translation_introduction_a_1: 
+ - A metric for machine translation centered on a notion of precision of a candidate with respect to reference text.
+
+# Question 2 (/3): What are the key parts of IBM Model 1?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+machine_translation_introduction_a_2: 
+ - Term level translation model
+ - Alignment model
+ 

@@ -1,0 +1,272 @@
+# Write your short answers in this file, replacing the placeholders as appropriate.
+# This assignment consists of 6 parts for a total of 67 points.
+# - Project (0 points)
+# - Embeddings (13 points)
+# - ML Fairness (14 points)
+# - CNN (11 points)
+# - Language Models (17 points)
+# - TensorFlow (12 points)
+
+
+
+###################################################################
+###################################################################
+## Notebook: Project (0 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (1): Project Proposal Prep (unrelated to a notebook) (0 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/0): Is your group size one or two?  If your group size is three, have you consulted with your instructor and have their agreement that your project makes sense to do in a group of three?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+project_1_1: 
+ - True
+
+# Question 2 (/0): Have you looked at the schedule in Piazza of paper reading sessions and decided which is closest to your project topic idea?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+project_1_2: 
+ - True
+
+# Question 3 (/0): Have you found at least one paper that is related to your topic?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+project_1_3: 
+ - True
+
+# Question 4 (/0): Have you downloaded and looked at a potential dataset?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+project_1_4: 
+ - True
+
+
+
+###################################################################
+###################################################################
+## Notebook: Embeddings (13 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (a): Nearest Neighbors (11 points)  | 
+# ------------------------------------------------------------------
+
+# Question 2a (/1): Closest word to bank?
+embeddings_a_2a: banks
+
+# Question 2b (/1): Closest word to plane?
+embeddings_a_2b: airplane
+
+# Question 2c (/1): Closest word to flies?
+embeddings_a_2c: fly
+
+# Question 2d (/1): Are the neighbors dominated by one sense of these words or is there evidence that the vector encodes meaning of the other senses as well?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+embeddings_a_2d: 
+ - Dominated by one interpretation
+
+# Question 3a (/1): Closest word to orange?
+embeddings_a_3a: yellow
+
+# Question 3b (/1): Closest word to ochre?
+embeddings_a_3b: pigment
+
+# Question 3c (/1): Closest word to green?
+embeddings_a_3c: red
+
+# Question 3d (/1): Closest word to celadon?
+embeddings_a_3d: faience
+
+# Question 3e (/3): Do the vectors for "ochre" and "celadon" appear to encode a notion of color?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+embeddings_a_3e: 
+ - Yes - related words emphasize the color interpretation
+
+
+# ------------------------------------------------------------------
+# | Section (b): Linear Analogies (2 points)  | 
+# ------------------------------------------------------------------
+
+# Question 3a (/1): Lizard to reptile, dog is to ____
+embeddings_b_3a: dogs
+
+# Question 3b (/1): Finger is to hand as toe is to ___
+embeddings_b_3b: hand
+
+
+
+###################################################################
+###################################################################
+## Notebook: ML Fairness (14 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (1): Racist AI (6 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): Italian vs. Mexican sentiment
+ml_fairness_1_1: 8.274483776698405
+
+# Question 2a (/1): Least biased
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+ml_fairness_1_2a: 
+ - ConceptNet Numberbatch
+
+# Question 2b (/1): Most biased
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+ml_fairness_1_2b: 
+ - Word2Vec
+
+# Question 3 (/1): What technique did the author apply?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+ml_fairness_1_3: 
+ - Debiasing Word Embeddings
+
+# Question 4 (/2): How significant is the model performance penalty for using debased vectors?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+ml_fairness_1_4: 
+ - None
+
+# ------------------------------------------------------------------
+# | Section (2): Debiasing Word Embeddings (2 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/2): Why are the results of Table 1 important?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+ml_fairness_2_1: 
+ - We see little tradeoff between model performance and model bias.
+
+
+# ------------------------------------------------------------------
+# | Section (3): Adversarial Learning (6 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/2): What is the parity gap?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+ml_fairness_3_1: 
+ - The probability assigned to the positive class given a protected variable is true minus the probability assigned to the positive class given the protected variable is false
+
+# Question 2 (/2): What is the equity gap?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+ml_fairness_3_2: 
+ - The difference in propensity of the model to make a correct judgement in either direction given a particular value of protected variable
+
+# Question 3 (/2): What is the intuition behind Jlambda?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+ml_fairness_3_3: 
+ - A negation of the gradient from a second head on the network that is trying to predict the protected variable such that the main network parameters make predictions worse on that head
+
+
+
+###################################################################
+###################################################################
+## Notebook: CNN (11 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (1): Prework (11 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): Why CNNs?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+cnn_1_1: 
+ - Capture local structure using a small number of parameters
+
+# Question 2 (/1): What is pooling?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+cnn_1_2: 
+ - A way to reduce the number of parameters of your network
+
+# Question 3 (/1): Since pooling takes the max of a neighboring group of cells in a layer, how can this be differentiable?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+cnn_1_3: 
+ - The partial derivative of the output of the pooling layer is zero with respect to all but the max cell whose partial derivative is 1.
+
+# Question 4 (/2): If the previous layer had dimension 224x224x3 and the next has dimension 224x224x64, what is the most likely depth dimension of the filters you applied?
+cnn_1_4: 3
+
+# Question 5 (/2): If the previous layer had dimension 224x224x3 and the next has dimension 224x224x64, how many filters did you apply?
+cnn_1_5: 64
+
+# Question 6 (/2): If the previous layer had dimension 224x224x3 and the next has dimension 222x222x64, what might you consider adding?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+cnn_1_6: 
+ - Padding
+
+# Question 7 (/2): If the previous layer had dimension 224x224x3 and the next has dimension 112x112x64, what stride did you use?
+cnn_1_7: 2
+
+
+
+###################################################################
+###################################################################
+## Notebook: Language Models (17 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (1): Preliminaries (unrelated to a notebook) (17 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): What is the goal of a language model?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+language_models_1_1: 
+ - Score whether a sequence of tokens belongs to a language.
+
+# Question 2 (/1): If you don't have much training data, what might happen if you increase "n" of n-grams?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+language_models_1_2: 
+ - Model performance will decrease despite increased sparsity
+
+# Question 3 (/1): If you have lots of training data, what might happen if you increase "n" of n-grams?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+language_models_1_3: 
+ - Model performance will improve despite increased sparsity
+
+# Question 4 (/2): A reasonable technique to handle out-of-vocabulary words?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+language_models_1_4: 
+ - All of the above
+
+# Question 5 (/2): Smoothing is a technique to... (hint - remember P(next_word | context) must add up to 1 across all next_word-s.
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+language_models_1_5: 
+ - All of the above
+
+# Question 6 (/5): Let C[x, y, z] be the number of times the text "x y z" appeared in the corpus.  C[the cat] = 8000, C[the cat in] = 5000, C[the cat in the] = 1000 and C[the cat in the hat] = 800.  The size of your vocabulary is 10,000.  What is P(hat | the cat in the)?
+language_models_1_6: 0.8
+
+# Question 7 (/5): Let C[x, y, z] be the number of times the text "x y z" appeared in the corpus.  C[the cat] = 8000, C[the cat in] = 5000, C[the cat in the] = 1000 and C[the cat in the hat] = 800.  The size of your vocabulary is 10,000.  What is P(hat | the cat in the) if you use "AddK smoothing" with k=5?
+language_models_1_7: 0.015784
+
+
+
+###################################################################
+###################################################################
+## Notebook: TensorFlow (12 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (1): Binary Classifier (12 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): What's the derivative of a relu(z) with respect to z if z = -5?
+tensorflow_1_1: 0
+
+# Question 2 (/1): What's the derivative of relu(z) with respect to z if z = 5
+tensorflow_1_2: 1
+
+# Question 3 (/5): How few layers can you get away with and still achieve the desired loss on the training set?
+tensorflow_1_3: 2
+
+# Question 4 (/5): How small is the biggest hidden layer is the smallest you can use in the body of the network and still achieve the desired loss on the training set?
+tensorflow_1_4: 3

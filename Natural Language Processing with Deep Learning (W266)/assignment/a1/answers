@@ -1,0 +1,161 @@
+# Write your short answers in this file, replacing the placeholders as appropriate.
+# This assignment consists of 2 parts for a total of 32 points.
+# - Information Theory (18 points)
+# - Neural Network Basics (14 points)
+
+
+
+###################################################################
+###################################################################
+## Notebook: Information Theory (18 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (Code): Binary Entropy (1 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): What is BinaryEntropy(0.75)?
+information_theory_code_1: 0.8
+
+
+# ------------------------------------------------------------------
+# | Section (A): Pointwise Mutual Information (2 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): What is PMI(rainy, cloudy)?
+information_theory_a_1: 0.3
+
+# Question 2 (/1): What is PMI(washington, post)?
+information_theory_a_2: 6.0
+
+
+# ------------------------------------------------------------------
+# | Section (B): Entropy (5 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1.1 (/1): Expected bits for uniform probability, 128 messages?
+information_theory_b_1_1: 7
+
+# Question 1.2 (/1): Entropy for uniform probability, 128 messages?
+information_theory_b_1_2: 7
+
+# Question 1.3 (/1): Entropy for uniform probability, 1024 messages?
+information_theory_b_1_3: 10
+
+# Question 2 (/1): Which has higher entropy?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+information_theory_b_2: 
+ - B
+
+# Question 3 (/1): Which has higher entropy?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+information_theory_b_3: 
+ - A
+
+
+# ------------------------------------------------------------------
+# | Section (C): Cross-Entropy and KL Divergence (10 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): What is the Cross Entropy?
+information_theory_c_1: 0.5
+
+# Question 2 (/1): What is the KL divergence?
+information_theory_c_2: 0.5
+
+# Question 3 (/5): Do you actually need to compute the everything?  (Hint... think of the value of most terms in the summation)
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+information_theory_c_3: 
+ - False
+
+# Question 4 (/1): What if the model put all the mass on the correct class?  What is the cross entropy?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+information_theory_c_4: 
+ - Zero
+
+# Question 5 (/1): What if the model put all the mass on class 1?  What is the cross entropy?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+information_theory_c_5: 
+ - Infinite
+
+# Question 6 (/1): What if the model put 1/3 of the mass on classes 1, 2, 3?  What is the cross entropy?
+# (This question is multiple choice.  Delete all but the correct answer(s)).
+information_theory_c_6: 
+ - Infinite
+
+
+
+###################################################################
+###################################################################
+## Notebook: Neural Network Basics (14 points)
+###################################################################
+###################################################################
+
+
+# ------------------------------------------------------------------
+# | Section (A): Logistic Regression (2 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1.1 (/1): What are the dimensions of W?  (Hint... don't change the dimensionality of the answer.)
+neural_network_basics_a_1_1: [10]
+
+# Question 1.2 (/1): What are the dimensions of b?  (Hint... don't change the dimensionality of the answer.)
+neural_network_basics_a_1_2: [1]
+
+
+# ------------------------------------------------------------------
+# | Section (B): Batching (4 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): What are the dimensions of W?
+neural_network_basics_b_1: [10]
+
+# Question 2 (/1): What are the dimensions of b?
+neural_network_basics_b_2: [1]
+
+# Question 3 (/1): What are the dimensions of x?
+neural_network_basics_b_3: [10, 10]
+
+# Question 4 (/1): What are the dimensions of z?
+neural_network_basics_b_4: [10]
+
+
+# ------------------------------------------------------------------
+# | Section (C): Logistic Regression NumPy Implementation (2 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): What is the probability of the positive class for [0, 0, 0, 0, 5]?
+neural_network_basics_c_1: 0.5
+
+# Question 2 (/1): What's the cross entropy loss if the second example is positive?
+neural_network_basics_c_2: 1
+
+
+# ------------------------------------------------------------------
+# | Section (D): NumPy Feed Forward Neural Network (2 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): What is the probability of the third example in the batch?
+neural_network_basics_d_1: 0.4
+
+# Question 2 (/1): What is the cross-entropy loss if its label is negative?
+neural_network_basics_d_2: 0.7
+
+
+# ------------------------------------------------------------------
+# | Section (E): Softmax (4 points)  | 
+# ------------------------------------------------------------------
+
+# Question 1 (/1): What is the probability of the middle class?
+neural_network_basics_e_1: 0.2
+
+# Question 2 (/1): What is the cross-entropy loss if the correct class is the last (z=3)?
+neural_network_basics_e_2: 0.6
+
+# Question 3.1 (/1): What is the dimension of W3 above if it were a three class problem instead of a binary one?
+neural_network_basics_e_3_1: [10, 3]
+
+# Question 3.2 (/1): What is the dimension of b3 above if it were a three class problem?
+neural_network_basics_e_3_2: [3]
