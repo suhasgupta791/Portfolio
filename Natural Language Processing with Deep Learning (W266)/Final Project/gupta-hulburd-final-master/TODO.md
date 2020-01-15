@@ -1,0 +1,26 @@
+- [X] Extract features from Squad 2.0 per https://github.com/google-research/bert#using-bert-to-extract-fixed-feature-vectors-like-elmo
+- [X] Read deconvolution papers and ensure we can use keras implementation: https://keras.io/backend/#conv2d_transpose
+- [X] ~Set up simple CNN to consume these features~
+- [X] Run bert/run_squad.py on the uncased Bert base dataset for a comparison.
+- [X] Calculate logits and loss for answers
+- [X] Run a more complex CNN.
+- [X] Attempt create context aware bidirectional CNN
+- [X] Add a training hook (`tf.train.SessionRunHook`) to get the accuracy on an evaluation set.
+- [ ] Explore limited hyperparameter spaces:
+    - [X] CNN
+    - [X] LSTM
+    - [X] Fully connected
+    - [X] Contextualized CNN
+- [ ] Set up prediction loop for dev evaluation (this should support the error analysis) (Eric)
+- [ ] Create a visual for the centextualized CNN (Eric)
+- [ ] Write report
+  - [ ] intro to BERT and Squad problem (Suhas) 
+  - [ ] motivation of experiments (Suhas/Eric)
+  - [ ] intro to additional layers (Eric Contextualized CNN, Suhas remainder)
+  - [ ] table and chart results (Suhas)
+  - [ ] results write up (Suhas/Eric)
+  - [ ] error analysis 
+  - [ ] conclusion, opportunities for additional study (Suhas/Eric)
+  - [ ] Appendix 1 - code explanation/ navigation
+- [ ] Format report into requested "professional" format (TBD)
+
