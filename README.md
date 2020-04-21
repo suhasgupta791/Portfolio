@@ -3,7 +3,9 @@
 **(www.linkedin.com/in/guptasuhas)**
 
 #### Lead electrical engineer at Apple Inc. designing state of the art hardware for Macbook Pros. 
-  - Delivered three new MacBook Pro products in 2018 by leading cross functional hardware development. Efficiently managed design and operations of failure analysis and directed engineering personnel to meet tight project deadlines and successfully deliver products to market.
+  - Successfully launched multiple Macbook Pro products to mass production including Apple's first 16 inch Macbook Pro in 2019 as the lead electrical engineer for display module. 
+  - Led electrical system and silicon architecture design, implmented schematics and layout, supervised lab and factory validation and assembly process as the display electrical module lead. 
+  - Efficiently managed design and operations of failure analysis and directed engineering personnel to meet tight project deadlines and successfully deliver products to market.
   - Lead cross-functional effort to automate image analysis for display defect detection through
 computer vision and machine learning algorithm development. This effort is intended to improve the display product development efficiency by 5x through elimination of qualitative binning of display performance by human operators. Proficient in developing code in a team environment
 using Git.
