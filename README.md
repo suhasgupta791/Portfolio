@@ -42,3 +42,4 @@ that improved electrical module validation efficiency by 3x.
   - Fundamentals of data engineering (W205)
   - Applied machine learning (W207)
   - Natural language processing with deep learning (W266)
+  - Deep learning on the cloud and edge (W251)
