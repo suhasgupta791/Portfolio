@@ -24,27 +24,12 @@ Steered semiconductor technology direction and CPU architecture for data center 
 - Managed PDK development and support, including facilitating meetings, execution goals, risk identification and mitigation, and coordinating development efforts between geographically distributed engineering teams enabling internal and custom foundry product tape-outs on time and with high quality.
 
 ### Student of Master's in Information and Data Science (MIDS Class of 2020) at UC Berkeley, CA
+Masters degree specializing in natural language processing, distributed machine learning and edge computing concepts and applications. Experienced in popular frameworks (Scikit-Learn, TensorFlow, PyTorch, Keras etc.), Python programming, infrastructure tools (e.g. docker) and distributed computing (e.g. PySpark, MapReduce) concepts.
+- Developed causal inference to propose actions for a political campaign with analysis of North Carolina crime statistic data. (Link : report)
+- Developed a kernel for SF Crime Classification Kaggle competition with ensemble of Logistic regression, Multinomial Naïve Bayes, Decision trees & Random forest machine classification techniques using the python based scikit-learn machine learning framework. (Link : Code Repo & Jupyter Notebook)
+- Developed an augmentation to BERT model for improving performance on SQAUD 2.0 question answering dataset. Designed and implemented application pipeline for data load, model training and inference using TensorFlow framework. Trained new contextual CNN networks as an augmentation to basic BERT for task specific performance improvement. (Paper: https://arxiv.org/abs/1908.01767 | GitHub: Code Repo)
+- Developed a sarcasm detection application using transfer learning with BERT using PyTorch framework for training and inference on Reddit comments. Developed end-to-end application for training in the cloud and inference on Jetson TX2 edge device while developing and supporting project’s application platform with docker containers. (Paper: Automatic Sarcasm Detection in Long-Form Forum Comments | GitHub: Code Repo)
+- Developed large scale machine learning pipeline for Click-Through-Rate prediction using distributed logistic regression in PySpark. Designed the pipeline for data load, algorithm training and testing using MapReduce concepts and implemented on multi-node cluster on Google Cloud. (Link to code repo)
 
 ### Previous education: 
   - Masters in Electrical and Computer Engineering (University of Florida, Gainesville)
-
-#### MIDS@UC Berkeley
-
-#### Projects
-
-| Project Title |  Brief Description  |
-|:----------:|:----------|
-| Regression Modeling of County Crime Data |  Regression modeling and statistical inference on crime data to assist a political campaign|
-| Digit Classification |  Developed an image recognition system for classifying digits in MNIST database |
-| Text Classification |  Trained classifiers to distinguish between news topics based on the texts in 20 newgroup posts |
-| San Francisco Crime Classification |  Kaggle competition for crime category classification given crime location and time |
-| Augmenting BERT for Question Answering with Squad 2.0 |  Adding hidden neural layers to BERT language model for improving performance on SQUAD 2.0 |
-| Predicting Sarcasm in Long Forum Comments |  Implement end-to-end application for prediction sarcasm in text using BERT augmentation |
-
-#### Courses
-  - Research design and applications for data and analysis (W201)
-  - Statistics and probability for data science (W203)
-  - Fundamentals of data engineering (W205)
-  - Applied machine learning (W207)
-  - Natural language processing with deep learning (W266)
-  - Deep learning on the cloud and edge (W251)
