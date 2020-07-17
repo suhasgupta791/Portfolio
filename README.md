@@ -24,12 +24,18 @@ Steered semiconductor technology direction and CPU architecture for data center 
 - Managed PDK development and support, including facilitating meetings, execution goals, risk identification and mitigation, and coordinating development efforts between geographically distributed engineering teams enabling internal and custom foundry product tape-outs on time and with high quality.
 
 ### Student of Master's in Information and Data Science (MIDS Class of 2020) at UC Berkeley, CA
+
 Masters degree specializing in natural language processing, distributed machine learning and edge computing concepts and applications. Experienced in popular frameworks (Scikit-Learn, TensorFlow, PyTorch, Keras etc.), Python programming, infrastructure tools (e.g. docker) and distributed computing (e.g. PySpark, MapReduce) concepts.
-- Developed causal inference to propose actions for a political campaign with analysis of North Carolina crime statistic data. (Link : report)
-- Developed a kernel for SF Crime Classification Kaggle competition with ensemble of Logistic regression, Multinomial Naïve Bayes, Decision trees & Random forest machine classification techniques using the python based scikit-learn machine learning framework. (Link : Code Repo & Jupyter Notebook)
-- Developed an augmentation to BERT model for improving performance on SQAUD 2.0 question answering dataset. Designed and implemented application pipeline for data load, model training and inference using TensorFlow framework. Trained new contextual CNN networks as an augmentation to basic BERT for task specific performance improvement. (Paper: https://arxiv.org/abs/1908.01767 | GitHub: Code Repo)
-- Developed a sarcasm detection application using transfer learning with BERT using PyTorch framework for training and inference on Reddit comments. Developed end-to-end application for training in the cloud and inference on Jetson TX2 edge device while developing and supporting project’s application platform with docker containers. (Paper: Automatic Sarcasm Detection in Long-Form Forum Comments | GitHub: Code Repo)
-- Developed large scale machine learning pipeline for Click-Through-Rate prediction using distributed logistic regression in PySpark. Designed the pipeline for data load, algorithm training and testing using MapReduce concepts and implemented on multi-node cluster on Google Cloud. (Link to code repo)
+
+- Developed causal inference to propose actions for a political campaign with analysis of North Carolina crime statistic data. (Link : [Link](https://github.com/suhasgupta791/Portfolio/blob/master/Statistics%20and%20probability%20(W203)/Lab3/Andrade_Shane_Gupta_Suhas_Nath_Vidhu_Lab3_final.pdf)
+
+- Developed a kernel for SF Crime Classification Kaggle competition with ensemble of Logistic regression, Multinomial Naïve Bayes, Decision trees & Random forest machine classification techniques using the python based scikit-learn machine learning framework. (Link : [Code Repo & Jupyter Notebook](https://github.com/suhasgupta791/Portfolio/blob/master/Applied%20Machine%20Learning%20(W207)/Final%20Project/SuhasGupta_NehaKumar_Final_Project.ipynb)
+
+- Developed an augmentation to BERT model for improving performance on SQAUD 2.0 question answering dataset. Designed and implemented application pipeline for data load, model training and inference using TensorFlow framework. Trained new contextual CNN networks as an augmentation to basic BERT for task specific performance improvement. ([Paper](https://arxiv.org/abs/1908.01767) | GitHub: [Code Repo](https://github.com/erichulburd/gupta-hulburd-w266-final)
+
+- Developed a sarcasm detection application using transfer learning with BERT using PyTorch framework for training and inference on Reddit comments. Developed end-to-end application for training in the cloud and inference on Jetson TX2 edge device while developing and supporting project’s application platform with docker containers. ([Paper](https://docs.google.com/document/d/15cFBHr7J9ShRWfofd_qb_6lStNXEuaYFBrkU-DYdABI/edit?ts=5e801991)| GitHub: [Code Repo](https://github.com/suhasgupta791/mids-w251-final-project)
+
+- Developed large scale machine learning pipeline for Click-Through-Rate prediction using distributed logistic regression in PySpark. Designed the pipeline for data load, algorithm training and testing using MapReduce concepts and implemented on multi-node cluster on Google Cloud. [Link to code repo](https://github.com/UCB-w261/f19-final-project-f19-team-31.git)
 
 ### Previous education: 
   - Masters in Electrical and Computer Engineering (University of Florida, Gainesville)
