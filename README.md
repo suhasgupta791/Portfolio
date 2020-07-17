@@ -2,21 +2,26 @@
 
 **(www.linkedin.com/in/guptasuhas)**
 
-#### Lead electrical engineer at Apple Inc. designing state of the art hardware for Macbook Pros. 
-  - Successfully launched multiple Macbook Pro products to mass production including Apple's first 16 inch Macbook Pro in 2019 as the lead electrical engineer for display module. 
-  - Led electrical system and silicon architecture design, implmented schematics and layout, supervised lab and factory validation and assembly process as the display electrical module lead. 
-  - Efficiently managed design and operations of failure analysis and directed engineering personnel to meet tight project deadlines and successfully deliver products to market.
-  - Lead cross-functional effort to automate image analysis for display defect detection through
-computer vision and machine learning algorithm development. This effort is intended to improve the display product development efficiency by 5x through elimination of qualitative binning of display performance by human operators. Proficient in developing code in a team environment
-using Git.
-  - Developed a portable automation library for data processing and analysis in MATLAB and Python
-that improved electrical module validation efficiency by 3x.
+#### Lead electrical engineer at Apple Inc. designing state of the art hardware for Macbook Pros (2017 - Present)
 
-#### Design Engineer and Semiconductor Technologist @ Intel Corporation (previous)
-  - Led design of semiconductor devices and circuits for mixed signal IP development delivering three novel process nodes and enabled 2x manufacturing cost scaling per year.
-  - Drove technology definition through complex wafer data analysis consisting of defect signatures from more than a billion on-chip transistors and interconnect segments.
-  - Developed innovative circuit using gradient descent regression analysis to enable 20% silicon area scaling in 3D multi CPU chip architectures.
+Leading the design of Apple MacBook display products and technology with technical expertise and cross-functional
+collaboration to deliver a new product from concept to production.
 
+- Delivered the 16” MacBook Pro in 2019 to mass production as the electrical module lead driving electrical architecture & silicon definition, system design, firmware development, factory validation and field failure analysis.
+- Managed ODMs, JDMs throughout the product life cycle ensuring high quality sub modules are delivered to system builds while providing engineering support for builds (EVT/DVT/PVT) to drive a new product to mass production.
+- Leading key technology definition of LED backlight design while driving silicon definition, validation, board design and system integration to bring state of the art display technology to Mac portables consumer products.
+- Leading new silicon bring-up, validation and integration of electrical sub system with multi-functional team collaboration
+of optics, mechanical, industrial design & system software to deliver the next Apple product innovation to consumers.
+- Piloted validation methodology for display sub-module qualification through development of test plans, timelines and data processing software to enable bug detection in silicon or electrical module design, reducing risk of ramp blocking issues while enhancing quality of Apple display products and customer experience.
+
+#### Design Engineer and Semiconductor Technologist @ Intel Corporation (2010 - 2017)
+
+Steered semiconductor technology direction and CPU architecture for data center products. Leveraged technical expertise in circuit design and semiconductor technology to cultivate, evaluate, and propose groundbreaking solutions to influence technology and product roadmap formation. Applied expertise in library and test chip development, as well as excellent team leadership abilities.
+
+- Delivered key semiconductor process technology and architectural innovations that enabled best in class IO scaling in high voltage applications and resulting in $1.5B savings in silicon cost. This work was recognized with an Intel Achievement Award for innovation and execution excellence (awarded annually to <1% of Intel employees worldwide)
+- Drove definition of innovative 3D die attach, chip integration, package technologies and interconnect architecture that enabled multi-chip SOC platforms for high performance server platforms.
+- Piloted optimization algorithms to help define energy & delay efficient on-chip interconnect architecture for heterogeneous integration of high core-count dies that enabled definition of technology metrics and features that guided the path for Intel’s 7nm process node scaling.
+- Managed PDK development and support, including facilitating meetings, execution goals, risk identification and mitigation, and coordinating development efforts between geographically distributed engineering teams enabling internal and custom foundry product tape-outs on time and with high quality.
 
 ### Student of Master's in Information and Data Science (MIDS Class of 2020) at UC Berkeley, CA
 
